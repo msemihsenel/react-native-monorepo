@@ -4,8 +4,7 @@ import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { AppNavigator } from './src/navigation/Navigation';
 
-import { default as theme } from './custom-theme.json';
-import { default as mapping } from './mapping.json';
+import { default as KittenConfigs } from '@monorepo/kitten-configs';
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -30,8 +29,8 @@ export default () => {
       <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider
         {...eva}
-        theme={{ ...eva.light, ...theme }}
-        customMapping={mapping}
+        theme={{ ...eva.light, ...KittenConfigs.customTheme }}
+        customMapping={KittenConfigs.customMapping}
       >
         <AppNavigator />
       </ApplicationProvider>
