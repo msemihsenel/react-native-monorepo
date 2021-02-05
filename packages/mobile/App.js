@@ -7,27 +7,26 @@ import { AppNavigator } from './src/navigation/Navigation';
 import { default as theme } from './custom-theme.json';
 import { default as mapping } from './mapping.json';
 
-//import { createStore } from 'redux'
-//import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-// const initialState = {
-//   status: 'first value'
-// }
+const initialState = {
+  status: 'first value'
+}
 
-// const reducer = (state = initialState, action) => {
-//   if (action.type == 'SET_STATUS') {
-//     return Object.assign({}, state, { status: 'new value' + action.payload })
-//   }
-//   return state
-// }
+const reducer = (state = initialState, action) => {
+  if (action.type == 'SET_STATUS') {
+    return Object.assign({}, state, { status: 'new value' + action.payload })
+  }
+  return state
+}
 
-// const store = createStore(reducer)
+const store = createStore(reducer)
 
 export default () => {
   return (
 
-    <>
-      {/*<Provider store={store}>*/}
+    <Provider store={store}>
       <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider
         {...eva}
@@ -36,8 +35,7 @@ export default () => {
       >
         <AppNavigator />
       </ApplicationProvider>
-      {/*</Provider>*/}
-    </>
+    </Provider>
 
   )
 };

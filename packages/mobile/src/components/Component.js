@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { Button, Divider, Layout, TopNavigation } from '@ui-kitten/components';
 
-//import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 
 const Component = (props) => {
     console.log('PROPS', props)
@@ -13,19 +13,17 @@ const Component = (props) => {
     );
 };
 
-// const mapStateToProps = (state) => {
-//     return {
-//         status: state.status
-//     }
-// }
+const mapStateToProps = (state) => {
+    return {
+        status: state.status
+    }
+}
 
-// const mapDispatchToProps = (dispatch) => {
-//     console.log('dispatch çalıştı')
-//     return {
-//         change: () => dispatch({ type: 'SET_STATUS', payload: 'test' })
-//     }
-// }
+const mapDispatchToProps = (dispatch) => {
+    console.log('dispatch çalıştı')
+    return {
+        change: () => dispatch({ type: 'SET_STATUS', payload: 'test' })
+    }
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Component)
-
-export default Component
+export default connect(mapStateToProps, mapDispatchToProps)(Component)
