@@ -1,32 +1,42 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
-//import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { AppNavigator } from './src/navigation/Navigation';
 
 import { default as theme } from './custom-theme.json';
 import { default as mapping } from './mapping.json';
 
-//import { SafeAreaView } from 'react-native';
-import { Button, Divider, Layout, TopNavigation, Text } from '@ui-kitten/components';
+//import { createStore } from 'redux'
+//import { Provider } from 'react-redux'
 
-const HomeScreen = () => (
-  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text category='h1'>HOME</Text>
-    <Button>OPEN DETAILS</Button>
-  </Layout>
-);
+// const initialState = {
+//   status: 'first value'
+// }
 
-export default function App() {
+// const reducer = (state = initialState, action) => {
+//   if (action.type == 'SET_STATUS') {
+//     return Object.assign({}, state, { status: 'new value' + action.payload })
+//   }
+//   return state
+// }
+
+// const store = createStore(reducer)
+
+export default () => {
   return (
+
     <>
-      {/*<IconRegistry icons={EvaIconsPack} />*/}
+      {/*<Provider store={store}>*/}
+      <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider
         {...eva}
         theme={{ ...eva.light, ...theme }}
         customMapping={mapping}
       >
-        <HomeScreen />
+        <AppNavigator />
       </ApplicationProvider>
+      {/*</Provider>*/}
     </>
 
   )
