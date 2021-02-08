@@ -1,24 +1,22 @@
+import { connect } from 'react-redux'
 
-
-// export default class Page extends Component {
-//   getInitialProps({pathname, query}) {        
-//     return {custom: 'custom'}; // pass some custom props to component
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <div>Prop from getInitialProps {this.props.custom}</div>
-//       </div>
-//     )
-//   }
-// }
-// OR in functional style
 const Page = (props) => (
   <div>
-    <div>Prop from getInitialProps {props.custom}</div>
+    <div onClick={() => { props.change() }}>from redux=> {props.status}</div>
   </div>
 );
-Page.getInitialProps = ({ pathname, query }) => ({
-  custom: 'custom' // pass some custom props to component
-});
-export default Page;
+
+const mapStateToProps = (state) => {
+  return {
+    status: state.status
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  console.log('dispatch çalıştı')
+  return {
+    change: () => dispatch({ type: 'SET_STATUS', payload: 'PAGE' })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page)
