@@ -10,7 +10,7 @@
     ],
     "nohoist":[]
   },
-  "dependencies": {
-    "react-native":"*"
+  "scripts": {
+    "clear-node_modules": "rm -rf node_modules && rm yarn.lock && cd packages/mobile && rm -rf node_modules && cd ../web && rm -rf node_modules && cd ../.."
   }
 }
