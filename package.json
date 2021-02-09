@@ -11,6 +11,6 @@
     "nohoist":[]
   },
   "scripts": {
-    "clear-node_modules": "rm -rf node_modules && rm yarn.lock && cd packages/mobile && rm -rf node_modules && cd ../web && rm -rf node_modules && cd ../.."
+    "clear-node_modules": "rm -rf node_modules && rm yarn.lock && cd packages/mobile && rm -rf node_modules && cd ../web && rm -rf node_modules && cd ../common && rm -rf node_modules && cd ../.."
   }
 }
