@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import TestComponent from '../src/testComponent'
+
 class Test extends React.Component {
 
     static getInitialProps({ store }) { }
@@ -11,9 +13,13 @@ class Test extends React.Component {
 
     render() {
         return (
-            <div>
-                <div onClick={() => { this.props.change() }}>from redux=> {this.props.status}</div>
-            </div>
+            <>
+                <div>
+                    <div onClick={() => { this.props.change() }}>from redux=> {this.props.status}</div>
+                </div>
+                <TestComponent />
+            </>
+
         );
     }
 }
