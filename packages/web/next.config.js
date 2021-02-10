@@ -27,7 +27,7 @@
 // }
 
 const withPlugins = require('next-compose-plugins');
-const withTM = require('next-transpile-modules')(['@ui-kitten/components', 'react-native-svg', '@ui-kitten/eva-icons', 'react-native']);
+const withTM = require('next-transpile-modules')(['@ui-kitten/components', 'react-native-svg', '@ui-kitten/eva-icons', 'react-native', '@monorepo/common']);
 
 module.exports = withPlugins([withTM], {
     webpack: config => {

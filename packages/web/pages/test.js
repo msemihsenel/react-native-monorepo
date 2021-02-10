@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import TestComponent from '../src/testComponent'
 
+import { ComponentSecond } from '@monorepo/common'
+
 class Test extends React.Component {
 
     static getInitialProps({ store }) { }
@@ -18,6 +20,7 @@ class Test extends React.Component {
                     <div onClick={() => { this.props.change() }}>from redux=> {this.props.status}</div>
                 </div>
                 <TestComponent />
+                <ComponentSecond />
             </>
 
         );
