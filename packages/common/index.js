@@ -1,13 +1,12 @@
-//import CustomComponentForMapping from './components/CustomComponentForMapping';
+import CustomComponentForMapping from './components/CustomComponentForMapping';
 import ComponentSecond from './components/ComponentSecond';
 //import Component from './components/Component';
 
-// export default {
-//     CustomComponentForMapping,
-//     ComponentSecond,
-//     Component
-// }
+export { CustomComponentForMapping };
+export { ComponentSecond };
+
+
 
 //TODO:CustomComponentForMapping need fix for web
 
-export { ComponentSecond }
+//export { ComponentSecond }

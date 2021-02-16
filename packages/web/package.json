@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.13",
     "@eva-design/eva": "^2.0.0",
     "@ui-kitten/components": "^5.0.0",
     "@ui-kitten/eva-icons": "^5.0.0",
@@ -24,6 +25,7 @@
     "@monorepo/common":"1.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.13",
     "@babel/core": "^7.12.13",
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "babel-loader": "^8.2.2",

@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 import TestComponent from '../src/testComponent'
 
-import { ComponentSecond } from '@monorepo/common'
+import { Text } from '@ui-kitten/components';
+
+import { ComponentSecond, CustomComponentForMapping } from '@monorepo/common'
 
 class Test extends React.Component {
 
@@ -21,6 +23,9 @@ class Test extends React.Component {
                 </div>
                 <TestComponent />
                 <ComponentSecond />
+                <CustomComponentForMapping>
+                    <Text style={{ textAlign: 'center' }}>TEST</Text>
+                </CustomComponentForMapping>
             </>
 
         );
